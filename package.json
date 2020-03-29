@@ -1,0 +1,31 @@
+{
+  "name": "@caillou/dom-component-path",
+  "version": "1.0.0",
+  "description": "Get the component path of a DOM element.",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint --ignore-path .gitignore .",
+    "test": "mocha -r @babel/register -r jsdom-global/register 'specs.js'"
+  },
+  "author": "Pierre Spring <pierre.spring@caillou.ch>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jsdom": "^16.2.1",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^7.1.1"
+  },
+  "dependencies": {
+    "matches-selector": "^1.2.0"
+  }
+}
