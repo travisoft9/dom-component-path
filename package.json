@@ -7,7 +7,9 @@
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "mocha -r @babel/register -r jsdom-global/register 'specs.js'"
   },
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "author": "Pierre Spring <pierre.spring@caillou.ch>",
   "license": "MIT",
   "devDependencies": {
@@ -28,5 +30,13 @@
   },
   "dependencies": {
     "matches-selector": "^1.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caillou/dom-component-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caillou/dom-component-path/issues"
+  },
+  "homepage": "https://github.com/caillou/dom-component-path#readme"
 }
