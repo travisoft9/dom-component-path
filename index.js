@@ -44,9 +44,10 @@ function getElementNameAndSelector (element) {
   }
 
   if (element.className) {
-    const classSelector = '.' + element.className.split(' ').join('.')
+    const className = element.className.replace(/(\s|\n)+/g, ' ').trim()
+    const classSelector = '.' + className.split(' ').join('.')
     return {
-      name: `Class: ${element.className}`,
+      name: `Class: ${className}`,
       selector: classSelector
     }
   }

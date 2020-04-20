@@ -97,6 +97,29 @@ describe('component-path:', () => {
           }]
         )
       })
+
+      it.only('works with classNames that contain newlines and multiple spaces', () => {
+        const className = '       \n     foo     \n\nbar\n baz \n'
+        assert.deepEqual(
+          getResultFor(`
+            <div class="${className}"></div>
+            <div class="${className}"></div>
+            <div class="${className}">
+              <a href="/lalala"></a>
+              <a class="foo bar" href="https://foo.bar/baz">hello</a>
+              <a class="foo bar" data-select href="https://foo.bar/baz">hello</a>
+            </div>
+          `),
+          [{
+            name: 'Class: foo bar baz',
+            position: 3
+          },
+          {
+            name: 'Class: foo bar',
+            position: 2
+          }]
+        )
+      })
     })
 
     describe('ids:', () => {
