@@ -1,4 +1,4 @@
-import domComponentPath from './index.js'
+import { domComponentPath } from './index.js'
 import { assert } from 'chai'
 
 describe('component-path:', () => {
@@ -98,7 +98,7 @@ describe('component-path:', () => {
         )
       })
 
-      it.only('works with classNames that contain newlines and multiple spaces', () => {
+      it('works with classNames that contain newlines and multiple spaces', () => {
         const className = '       \n     foo     \n\nbar\n baz \n'
         assert.deepEqual(
           getResultFor(`

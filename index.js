@@ -1,6 +1,6 @@
 import matches from 'matches-selector'
 
-export default function domComponentPath (element) {
+export function domComponentPath (element) {
   const componentPath = []
 
   while (element) {
